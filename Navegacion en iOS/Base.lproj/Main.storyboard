@@ -167,9 +167,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7Qd-6C-M1r" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="I9q-pL-wFR">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" itemSpacing="30" itemWidth="50" id="I9q-pL-wFR">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.089301215279999999" green="0.80902777780000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.74509803919999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="ihW-4I-uPe" kind="relationship" relationship="viewControllers" id="cCC-bh-NBW"/>
@@ -209,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="2287" y="788"/>
         </scene>
-        <!--View Controller-->
+        <!--Tercera View Controller-->
         <scene sceneID="E1f-ix-7VG">
             <objects>
-                <viewController id="wXi-N7-zTI" sceneMemberID="viewController">
+                <viewController id="wXi-N7-zTI" customClass="TerceraViewController" customModule="Navegacion_en_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oT3-6P-RfU"/>
                         <viewControllerLayoutGuide type="bottom" id="cxd-vU-tcY"/>
@@ -236,19 +238,29 @@
                                     <segue destination="yJv-cA-JEc" kind="show" id="RAV-gH-Wob"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clC-L8-RCV">
+                                <rect key="frame" x="147" y="431" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HZY-0l-ZWA"/>
+                    <connections>
+                        <outlet property="txtParametro" destination="clC-L8-RCV" id="wer-sM-7og"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Iq-Kx-7tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="1533"/>
+            <point key="canvasLocation" x="2327" y="1508"/>
         </scene>
-        <!--View Controller-->
+        <!--Cuarta View Controller-->
         <scene sceneID="ETN-JY-H8S">
             <objects>
-                <viewController id="yJv-cA-JEc" sceneMemberID="viewController">
+                <viewController id="yJv-cA-JEc" customClass="CuartaViewController" customModule="Navegacion_en_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vsc-Rv-J41"/>
                         <viewControllerLayoutGuide type="bottom" id="s4t-Ac-Fwp"/>
@@ -264,13 +276,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBj-El-BaM">
+                                <rect key="frame" x="171" y="371" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lblParametro" destination="LBj-El-BaM" id="cNy-LT-SEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mq-7E-ag4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2978" y="1533"/>
+            <point key="canvasLocation" x="2998" y="1513"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="osb-Yz-SnB">
